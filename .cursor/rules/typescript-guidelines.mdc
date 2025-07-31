@@ -1,0 +1,47 @@
+# TypeScript开发规范
+
+## 类型定义
+1. 优先使用接口(interface)定义对象类型
+2. 使用类型别名(type)定义联合类型和复杂类型
+3. 为所有函数参数和返回值定义类型
+4. 使用泛型提高代码复用性
+
+## 命名规范
+- 接口名使用PascalCase (如: `MusicTrack`)
+- 类型别名使用PascalCase (如: `PlayerState`)
+- 变量和函数使用camelCase
+- 常量使用UPPER_SNAKE_CASE
+
+## 最佳实践
+1. 启用严格模式 (`strict: true`)
+2. 使用`const assertions`避免类型推断问题
+3. 优先使用`readonly`修饰符
+4. 使用可选链操作符(`?.`)和空值合并操作符(`??`)
+5. 避免使用`any`类型，优先使用`unknown`
+
+## 音乐项目特定类型
+```typescript
+interface MusicTrack {
+  id: string
+  title: string
+  artist: string
+  duration: number
+  album?: string
+  coverUrl?: string
+}
+
+interface PlayerState {
+  currentTrack: MusicTrack | null
+  isPlaying: boolean
+  volume: number
+  currentTime: number
+  duration: number
+}
+
+type PlaybackMode = 'sequential' | 'shuffle' | 'repeat'
+```
+description:
+globs:
+alwaysApply: false
+---
+ 

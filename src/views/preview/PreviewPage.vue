@@ -28,7 +28,7 @@
           <!-- 风格选择组件 -->
           <div class="bg-white/90 rounded-2xl shadow-lg p-4 backdrop-blur-sm">
             <div class="grid grid-cols-3 gap-3 mb-4">
-              <div v-for="(style, idx) in currentPageStyles" :key="style.id" 
+              <div v-for="(style, _) in currentPageStyles" :key="style.id" 
                 @click="selectStyle(style.id)"
                 :class="['flex flex-col items-center gap-2 cursor-pointer transition-all duration-200', 
                   selectedStyle === style.id ? 'scale-105' : 'hover:scale-102']">

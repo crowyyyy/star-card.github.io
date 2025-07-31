@@ -1,0 +1,57 @@
+# Vue组件开发规范
+
+## 组件结构
+所有Vue组件应遵循以下结构顺序：
+1. `<script setup lang="ts">` - TypeScript逻辑
+2. `<template>` - 模板
+3. `<style scoped>` - 样式
+
+## 命名规范
+- 组件文件名使用PascalCase (如: `MusicPlayer.vue`)
+- 组件名在模板中使用kebab-case (如: `<music-player>`)
+- Props使用camelCase
+- 事件名使用kebab-case
+
+## 最佳实践
+1. 优先使用Composition API和`<script setup>`
+2. 使用TypeScript定义props和emits
+3. 样式使用`scoped`避免全局污染
+4. 组件应该是单一职责的
+5. 使用语义化的HTML标签
+
+## 示例结构
+```vue
+<script setup lang="ts">
+interface Props {
+  title: string
+  isPlaying?: boolean
+}
+
+interface Emits {
+  (e: 'play'): void
+  (e: 'pause'): void
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  isPlaying: false
+})
+
+const emit = defineEmits<Emits>()
+</script>
+
+<template>
+  <div class="music-component">
+    <!-- 组件内容 -->
+  </div>
+</template>
+
+<style scoped>
+.music-component {
+  /* 样式 */
+}
+</style>
+description:
+globs:
+alwaysApply: false
+---
+ 

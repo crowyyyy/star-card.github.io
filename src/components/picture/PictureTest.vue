@@ -4,7 +4,6 @@ import {
   PictureType, 
   getPictureManager, 
   getPicturesByType, 
-  getPictureUrlByType,
   searchPictures 
 } from './index'
 

@@ -1,0 +1,31 @@
+# 音乐项目开发指南
+
+## 项目概述
+这是一个基于Vue 3 + TypeScript + Vite的音乐项目。
+
+## 技术栈
+- **前端框架**: Vue 3 (Composition API)
+- **构建工具**: Vite
+- **语言**: TypeScript
+- **样式**: CSS/SCSS
+
+## 项目结构
+- [package.json](mdc:package.json) - 项目依赖和脚本配置
+- [vite.config.ts](mdc:vite.config.ts) - Vite构建配置
+- [tsconfig.json](mdc:tsconfig.json) - TypeScript配置
+- [src/main.ts](mdc:src/main.ts) - 应用入口文件
+- [src/App.vue](mdc:src/App.vue) - 根组件
+- [src/components/](mdc:src/components/) - Vue组件目录
+- [src/assets/](mdc:src/assets/) - 静态资源目录
+
+## 开发规范
+1. 使用Vue 3 Composition API和`<script setup>`语法
+2. 所有组件使用TypeScript
+3. 组件文件使用PascalCase命名
+4. 样式使用scoped CSS
+5. 遵循Vue 3最佳实践
+
+## 常用命令
+- `npm run dev` - 启动开发服务器
+- `npm run build` - 构建生产版本
+- `npm run preview` - 预览生产构建
